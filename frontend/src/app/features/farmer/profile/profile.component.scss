@@ -1,0 +1,279 @@
+// Variables
+$primary-color: #4a7756;
+$secondary-color: #f4f6f9;
+$text-color: #333;
+$border-color: #e0e0e0;
+$card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+$success-color: #4caf50;
+$error-color: #f44336;
+
+.profile-settings-container {
+  padding: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.success-message {
+  background-color: rgba($success-color, 0.1);
+  color: darken($success-color, 10%);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid $success-color;
+  font-weight: 500;
+}
+
+.error-message {
+  background-color: rgba($error-color, 0.1);
+  color: darken($error-color, 10%);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid $error-color;
+  font-weight: 500;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    color: $text-color;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    color: #666;
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+  }
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  background-color: white;
+  color: $text-color;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  svg {
+    color: $primary-color;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: $card-shadow;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid $border-color;
+}
+
+.profile-photo-card {
+  background-color: #fefdf9;
+  padding: 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: $text-color;
+  }
+}
+
+.personal-details-card {
+  background-color: #fefdf9;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+      color: $text-color;
+    }
+  }
+
+  .edit-button {
+    background: none;
+    border: none;
+    color: $primary-color;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+      border-radius: 50%;
+    }
+  }
+
+  .details-view {
+    .detail-row {
+      display: flex;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $border-color;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .detail-label {
+      flex: 0 0 150px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .detail-value {
+      flex: 1;
+      color: $text-color;
+      font-weight: 500;
+    }
+  }
+
+  .edit-form {
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .cancel-button {
+      padding: 0.6rem 1.2rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      background-color: white;
+      color: $text-color;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+    }
+
+    .save-button {
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: $primary-color;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+
+      &:disabled {
+        background-color: #a0c0ac;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.security-card {
+  background-color: #fefdf9;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: $text-color;
+  }
+
+  .change-password-button {
+    padding: 0.7rem 1.5rem;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    background-color: white;
+    color: $primary-color;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .profile-photo-card .profile-photo-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .personal-details-card .details-view .detail-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

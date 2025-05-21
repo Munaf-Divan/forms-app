@@ -1,0 +1,691 @@
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <svg
+          width="41"
+          height="40"
+          viewBox="0 0 41 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.3 6.25L9.675 14.0625V32.0312H30.925V14.0625L20.3 6.25Z"
+            fill="#528D6B"
+            stroke="#528D6B"
+            stroke-width="0.9375"
+          />
+          <path
+            d="M8.89375 14.8438L20.3 5.46875L31.7063 14.8438"
+            stroke="#528D6B"
+            stroke-width="1.5625"
+            stroke-linecap="round"
+          />
+          <path
+            d="M18.2688 32.0312V23.4375H22.3313V32.0312"
+            stroke="white"
+            stroke-width="0.9375"
+            stroke-linecap="round"
+          />
+          <path
+            d="M15.5344 17.1875H13.1906C12.9749 17.1875 12.8 17.3624 12.8 17.5781V19.9219C12.8 20.1376 12.9749 20.3125 13.1906 20.3125H15.5344C15.7501 20.3125 15.925 20.1376 15.925 19.9219V17.5781C15.925 17.3624 15.7501 17.1875 15.5344 17.1875Z"
+            stroke="white"
+            stroke-width="0.78125"
+          />
+          <path
+            d="M27.4094 17.1875H25.0656C24.8499 17.1875 24.675 17.3624 24.675 17.5781V19.9219C24.675 20.1376 24.8499 20.3125 25.0656 20.3125H27.4094C27.6251 20.3125 27.8 20.1376 27.8 19.9219V17.5781C27.8 17.3624 27.6251 17.1875 27.4094 17.1875Z"
+            stroke="white"
+            stroke-width="0.78125"
+          />
+          <path d="M25.3 9.375V6.25H27.6438V12.5" fill="#528D6B" />
+          <path
+            d="M25.3 9.375V6.25H27.6438V12.5"
+            stroke="#528D6B"
+            stroke-width="1.17188"
+          />
+          <path
+            d="M20.3 35.625C28.9295 35.625 35.925 28.6294 35.925 20C35.925 11.3706 28.9295 4.375 20.3 4.375C11.6706 4.375 4.675 11.3706 4.675 20C4.675 28.6294 11.6706 35.625 20.3 35.625Z"
+            stroke="#528D6B"
+            stroke-width="1.5625"
+          />
+        </svg>
+        <span>Farmly</span>
+      </a>
+      <div class="header-buttons">
+        <a routerLink="/login" class="btn-outlined">Sign In</a>
+        <a routerLink="/signup" class="btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>
+          Fresh Farm Produce <br />
+          Directly To Your Table
+        </h1>
+        <p>
+          Farmly connects local farmers with consumers, making fresh,
+          sustainable produce accessible to everyone while supporting local
+          agriculture.
+        </p>
+        <div class="hero-buttons">
+          <a href="javascript:void(0)" class="btn-primary" (click)="shopNow()"
+            >Shop Now
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 2L8 6L4 10"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
+          <a href="javascript:void(0)" class="btn-text" (click)="joinAsFarmer()"
+            >Join as Farmer</a
+          >
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="assets/fresh-produce.png" alt="Fresh farm produce" />
+          <div class="badge">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                stroke="#4A7C59"
+                stroke-width="1.5"
+              />
+              <path
+                d="M5.5 8L7 9.5L10.5 6"
+                stroke="#4A7C59"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>100% Organic</span>
+          </div>
+          <div class="tag">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12L12 4"
+                stroke="#4A7C59"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4 4H12V12"
+                stroke="#4A7C59"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Farm to Table</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">
+      A simple process to connect farmers with consumers and bring fresh produce
+      to your table.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 16L16 8"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8 8H16V16"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Browse Produce</h3>
+        <p>
+          Explore seasonal fruits and vegetables from local farmers in your
+          area.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="4"
+              y="4"
+              width="16"
+              height="16"
+              rx="2"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+            />
+            <path
+              d="M16 10L10.5 15.5L8 13"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Place an Order</h3>
+        <p>
+          Select the items you want and choose between pickup or home delivery.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M12 5L12 19"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <h3>Receive Fresh Produce</h3>
+        <p>
+          Get your order delivered to your door or pick it up from the
+          designated location.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Sections -->
+<section class="benefits farmers-benefits">
+  <div class="container">
+    <h2 class="section-title">
+      Benefits for <span class="highlight">Farmers</span>
+    </h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+            />
+            <path
+              d="M12 7V12L15 15"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Direct Customer Access</h3>
+        <p>
+          Connect directly with local customers and build a loyal community
+          around your farm.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 16L18 16"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M6 12L18 12"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M6 8L18 8"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <h3>Fair Pricing</h3>
+        <p>
+          Set your own prices and get full value for your produce without
+          middlemen taking a cut.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3V21"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M3 12H21"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <h3>Simplified Management</h3>
+        <p>
+          Easily track inventory, manage orders, and coordinate deliveries all
+          in one place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits consumers-benefits">
+  <div class="container">
+    <h2 class="section-title">
+      Benefits for <span class="highlight">Consumers</span>
+    </h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+            />
+            <path
+              d="M12 5V3"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 7L19 5"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M19 12H21"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 17L19 19"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M12 19V21"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M7 17L5 19"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M5 12H3"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M7 7L5 5"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <h3>Fresh & Local</h3>
+        <p>
+          Access the freshest produce harvested or pick ripeness from farms in
+          your community.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="7" r="4" stroke="#4A7C59" stroke-width="1.5" />
+            <path
+              d="M5 19C5 16.2386 8.13401 14 12 14C15.866 14 19 16.2386 19 19"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <h3>Know Your Farmer</h3>
+        <p>
+          Build relationships with the people who grow your food and learn about
+          their practices.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 12H6L9 4L15 20L18 12H21"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Support Local Economy</h3>
+        <p>
+          Every purchase supports local farmers and helps strengthen your
+          community's food system.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Community Says</h2>
+
+    <div class="testimonial-cards">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 16C8.20914 16 10 14.2091 10 12C10 9.79086 8.20914 8 6 8C3.79086 8 2 9.79086 2 12C2 14.2091 3.79086 16 6 16Z"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+            />
+            <path
+              d="M18 16C20.2091 16 22 14.2091 22 12C22 9.79086 20.2091 8 18 8C15.7909 8 14 9.79086 14 12C14 14.2091 15.7909 16 18 16Z"
+              stroke="#4A7C59"
+              stroke-width="1.5"
+            />
+            <path d="M14 12H10" stroke="#4A7C59" stroke-width="1.5" />
+          </svg>
+        </div>
+        <p class="testimonial-quote">{{ testimonial.quote }}</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <!-- Placeholder for author image -->
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="32" height="32" rx="16" fill="#E8F5E9" />
+              <path
+                d="M16 16C17.6569 16 19 14.6569 19 13C19 11.3431 17.6569 10 16 10C14.3431 10 13 11.3431 13 13C13 14.6569 14.3431 16 16 16Z"
+                fill="#4A7C59"
+              />
+              <path
+                d="M10 21C10 18.2386 12.6863 16 16 16C19.3137 16 22 18.2386 22 21"
+                fill="#4A7C59"
+              />
+            </svg>
+          </div>
+          <div class="author-info">
+            <h4>{{ testimonial.name }}</h4>
+            <p>{{ testimonial.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2 class="section-title">Ready to Join the Farmly Community?</h2>
+    <p class="cta-text">
+      Sign up today to start buying fresh local produce or selling your farm
+      goods.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="javascript:void(0)" class="btn-secondary" (click)="shopNow()"
+        >Join as Consumer</a
+      >
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        (click)="joinAsFarmer()"
+        >Join as Farmer</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="/" class="logo">
+          <img
+            src="assets/images/farmly-logo.svg"
+            alt="Farmly Logo"
+            width="32"
+            height="32"
+          />
+          <span>Farmly</span>
+        </a>
+        <p>
+          Farmly connects local farmers directly with consumers, bringing the
+          freshest produce to your table while supporting sustainable
+          agriculture.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/login">Sign In</a></li>
+            <li><a routerLink="/signup">Sign Up</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 0C4.477 0 0 4.477 0 10C0 14.991 3.657 19.128 8.438 19.879V12.89H5.898V10H8.438V7.797C8.438 5.291 9.93 3.907 12.215 3.907C13.309 3.907 14.453 4.102 14.453 4.102V6.562H13.191C11.95 6.562 11.563 7.333 11.563 8.124V10H14.336L13.893 12.89H11.563V19.879C16.343 19.129 20 14.99 20 10C20 4.477 15.523 0 10 0Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 1.8C12.67 1.8 13 1.8 14.07 1.84C17.04 1.95 18.05 2.98 18.16 5.93C18.2 7 18.2 7.33 18.2 10C18.2 12.67 18.2 13 18.16 14.07C18.05 17.02 17.04 18.05 14.07 18.16C13 18.2 12.67 18.2 10 18.2C7.33 18.2 7 18.2 5.93 18.16C2.98 18.05 1.95 17.02 1.84 14.07C1.8 13 1.8 12.67 1.8 10C1.8 7.33 1.8 7 1.84 5.93C1.95 2.98 2.98 1.95 5.93 1.84C7 1.8 7.33 1.8 10 1.8ZM10 4.86C7.16 4.86 4.86 7.16 4.86 10C4.86 12.84 7.16 15.14 10 15.14C12.84 15.14 15.14 12.84 15.14 10C15.14 7.16 12.84 4.86 10 4.86ZM10 13.33C8.16 13.33 6.67 11.84 6.67 10C6.67 8.16 8.16 6.67 10 6.67C11.84 6.67 13.33 8.16 13.33 10C13.33 11.84 11.84 13.33 10 13.33ZM15.34 3.46C14.67 3.46 14.13 4 14.13 4.66C14.13 5.33 14.67 5.87 15.34 5.87C16 5.87 16.54 5.33 16.54 4.66C16.54 4 16 3.46 15.34 3.46Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.29 18.25C13.84 18.25 17.96 12.01 17.96 6.57C17.96 6.37 17.96 6.17 17.95 5.98C18.76 5.42 19.46 4.71 20 3.89C19.25 4.22 18.46 4.44 17.64 4.54C18.49 4.03 19.14 3.24 19.44 2.3C18.64 2.77 17.77 3.1 16.84 3.28C16.09 2.49 15.03 2 13.85 2C11.58 2 9.74 3.84 9.74 6.11C9.74 6.44 9.78 6.76 9.85 7.07C6.44 6.9 3.42 5.27 1.39 2.81C1.04 3.43 0.84 4.15 0.84 4.91C0.84 6.35 1.56 7.62 2.66 8.34C1.99 8.32 1.36 8.14 0.8 7.84C0.8 7.85 0.8 7.87 0.8 7.89C0.8 9.88 2.22 11.53 4.09 11.92C3.75 12.01 3.4 12.06 3.04 12.06C2.77 12.06 2.52 12.03 2.27 11.98C2.78 13.6 4.32 14.77 6.13 14.8C4.7 15.9 2.93 16.55 1 16.55C0.67 16.55 0.33 16.53 0 16.49C1.82 17.67 3.97 18.33 6.29 18.33"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2023 Farmly. All rights reserved.</p>
+      <div class="footer-badge">
+        <span>Built with</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+            fill="#E53E3E"
+          />
+          <path d="M8 11L11 8L8 5L5 8L8 11Z" fill="white" />
+        </svg>
+        <span>& Claude</span>
+      </div>
+    </div>
+  </div>
+</footer>

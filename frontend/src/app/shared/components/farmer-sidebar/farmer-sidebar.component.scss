@@ -1,0 +1,130 @@
+// Sidebar Variables
+$sidebar-bg: #4a7756;
+$sidebar-text: #fff;
+$sidebar-text-hover: #fff;
+$sidebar-icon-color: #fff;
+$sidebar-active-item-bg: #ffffff;
+$sidebar-active-item-border: 3px solid #ffffff;
+$sidebar-width: 280px;
+$sidebar-border-radius: 0px;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: $sidebar-bg;
+  color: $sidebar-text;
+  width: $sidebar-width;
+  height: 100vh;
+  padding: 0;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .app-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    flex: 1;
+  }
+}
+
+.nav-menu {
+  flex: 1;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0.5rem 0;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        color: $sidebar-text;
+        text-decoration: none;
+        border-left: 3px solid transparent;
+        transition: all 0.2s ease;
+        border-radius: 0 50px 50px 0;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        &.active {
+          background-color: $sidebar-active-item-bg;
+          color: $sidebar-bg;
+          font-weight: 600;
+
+          .nav-icon {
+            color: $sidebar-bg;
+          }
+        }
+
+        .nav-icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 1rem;
+          color: $sidebar-icon-color;
+        }
+
+        .nav-text {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .sidebar {
+    width: 75px;
+
+    .app-name {
+      display: none;
+    }
+
+    .nav-menu {
+      ul {
+        li {
+          a {
+            padding: 0.75rem;
+            justify-content: center;
+
+            .nav-text {
+              display: none;
+            }
+
+            .nav-icon {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

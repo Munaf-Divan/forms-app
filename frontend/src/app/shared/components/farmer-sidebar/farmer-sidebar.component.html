@@ -1,0 +1,130 @@
+<div class="sidebar">
+  <div class="brand">
+    <div class="logo">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 41 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20.3 6.25L9.675 14.0625V32.0312H30.925V14.0625L20.3 6.25Z"
+          fill="white"
+          stroke="white"
+          stroke-width="0.9375"
+        />
+        <path
+          d="M8.89375 14.8438L20.3 5.46875L31.7063 14.8438"
+          stroke="white"
+          stroke-width="1.5625"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18.2688 32.0312V23.4375H22.3313V32.0312"
+          stroke="#4a7756"
+          stroke-width="0.9375"
+          stroke-linecap="round"
+        />
+        <path
+          d="M15.5344 17.1875H13.1906C12.9749 17.1875 12.8 17.3624 12.8 17.5781V19.9219C12.8 20.1376 12.9749 20.3125 13.1906 20.3125H15.5344C15.7501 20.3125 15.925 20.1376 15.925 19.9219V17.5781C15.925 17.3624 15.7501 17.1875 15.5344 17.1875Z"
+          stroke="#4a7756"
+          stroke-width="0.78125"
+        />
+        <path
+          d="M27.4094 17.1875H25.0656C24.8499 17.1875 24.675 17.3624 24.675 17.5781V19.9219C24.675 20.1376 24.8499 20.3125 25.0656 20.3125H27.4094C27.6251 20.3125 27.8 20.1376 27.8 19.9219V17.5781C27.8 17.3624 27.6251 17.1875 27.4094 17.1875Z"
+          stroke="#4a7756"
+          stroke-width="0.78125"
+        />
+        <path d="M25.3 9.375V6.25H27.6438V12.5" fill="white" />
+        <path
+          d="M25.3 9.375V6.25H27.6438V12.5"
+          stroke="white"
+          stroke-width="1.17188"
+        />
+        <path
+          d="M20.3 35.625C28.9295 35.625 35.925 28.6294 35.925 20C35.925 11.3706 28.9295 4.375 20.3 4.375C11.6706 4.375 4.675 11.3706 4.675 20C4.675 28.6294 11.6706 35.625 20.3 35.625Z"
+          stroke="white"
+          stroke-width="1.5625"
+        />
+      </svg>
+    </div>
+    <h1 class="app-name">Farmly</h1>
+  </div>
+
+  <nav class="nav-menu">
+    <ul>
+      <li *ngFor="let item of navigationItems; let i = index">
+        <a [routerLink]="item.route" [class.active]="isItemActive(item)">
+          @if (item.icon === 'home') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="nav-icon"
+          >
+            <path
+              fill="currentColor"
+              d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+            />
+          </svg>
+          } @else if (item.icon === 'shopping_cart') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="nav-icon"
+          >
+            <path
+              fill="currentColor"
+              d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"
+            />
+          </svg>
+          } @else if (item.icon === 'format_list_bulleted') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="nav-icon"
+          >
+            <path
+              fill="currentColor"
+              d="M160-160q-17 0-28.5-11.5T120-200v-40q0-17 11.5-28.5T160-280h40q17 0 28.5 11.5T240-240v40q0 17-11.5 28.5T200-160h-40Zm0-240q-17 0-28.5-11.5T120-440v-40q0-17 11.5-28.5T160-520h40q17 0 28.5 11.5T240-480v40q0 17-11.5 28.5T200-400h-40Zm0-240q-17 0-28.5-11.5T120-680v-40q0-17 11.5-28.5T160-760h40q17 0 28.5 11.5T240-720v40q0 17-11.5 28.5T200-640h-40Zm160 480v-80h480v80H320Zm0-240v-80h480v80H320Zm0-240v-80h480v80H320Z"
+            />
+          </svg>
+          } @else if (item.icon === 'chat_bubble_outline') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="nav-icon"
+          >
+            <path
+              fill="currentColor"
+              d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"
+            />
+          </svg>
+          } @else if (item.icon === 'person_outline') {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="nav-icon"
+          >
+            <path
+              fill="currentColor"
+              d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+            />
+          </svg>
+          }
+          <span class="nav-text">{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

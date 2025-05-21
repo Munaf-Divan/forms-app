@@ -1,0 +1,356 @@
+<div class="signup-page">
+  <div class="signup-container">
+    <div class="signup-card">
+      <div class="logo-section">
+        <svg
+          width="41"
+          height="40"
+          viewBox="0 0 41 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.3 6.25L9.675 14.0625V32.0312H30.925V14.0625L20.3 6.25Z"
+            fill="#528D6B"
+            stroke="#528D6B"
+            stroke-width="0.9375"
+          />
+          <path
+            d="M8.89375 14.8438L20.3 5.46875L31.7063 14.8438"
+            stroke="#528D6B"
+            stroke-width="1.5625"
+            stroke-linecap="round"
+          />
+          <path
+            d="M18.2688 32.0312V23.4375H22.3313V32.0312"
+            stroke="white"
+            stroke-width="0.9375"
+            stroke-linecap="round"
+          />
+          <path
+            d="M15.5344 17.1875H13.1906C12.9749 17.1875 12.8 17.3624 12.8 17.5781V19.9219C12.8 20.1376 12.9749 20.3125 13.1906 20.3125H15.5344C15.7501 20.3125 15.925 20.1376 15.925 19.9219V17.5781C15.925 17.3624 15.7501 17.1875 15.5344 17.1875Z"
+            stroke="white"
+            stroke-width="0.78125"
+          />
+          <path
+            d="M27.4094 17.1875H25.0656C24.8499 17.1875 24.675 17.3624 24.675 17.5781V19.9219C24.675 20.1376 24.8499 20.3125 25.0656 20.3125H27.4094C27.6251 20.3125 27.8 20.1376 27.8 19.9219V17.5781C27.8 17.3624 27.6251 17.1875 27.4094 17.1875Z"
+            stroke="white"
+            stroke-width="0.78125"
+          />
+          <path d="M25.3 9.375V6.25H27.6438V12.5" fill="#528D6B" />
+          <path
+            d="M25.3 9.375V6.25H27.6438V12.5"
+            stroke="#528D6B"
+            stroke-width="1.17188"
+          />
+          <path
+            d="M20.3 35.625C28.9295 35.625 35.925 28.6294 35.925 20C35.925 11.3706 28.9295 4.375 20.3 4.375C11.6706 4.375 4.675 11.3706 4.675 20C4.675 28.6294 11.6706 35.625 20.3 35.625Z"
+            stroke="#528D6B"
+            stroke-width="1.5625"
+          />
+        </svg>
+        <h1>Farmly</h1>
+        <p class="tagline">Bringing farms closer to homes</p>
+      </div>
+
+      <h2>Let's grow together, one harvest at a time</h2>
+
+      <form
+        [formGroup]="signupForm"
+        (ngSubmit)="onSubmit()"
+        class="signup-form"
+        role="form"
+        aria-label="Signup form"
+      >
+        <div class="form-field">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            formControlName="fullName"
+            [class.error]="isFieldInvalid('fullName')"
+            placeholder="Enter your full name"
+            aria-label="Full name input"
+          />
+          <div
+            *ngIf="isFieldInvalid('fullName')"
+            class="error-message"
+            aria-live="polite"
+          >
+            <span *ngIf="signupForm.get('fullName')?.errors?.['required']"
+              >Full name is required</span
+            >
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="userType">I am a...</label>
+          <div class="custom-select" [class.open]="isDropdownOpen">
+            <div class="select-trigger" (click)="toggleDropdown()">
+              <span>{{ getUserTypeLabel() }}</span>
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5 5L9 1"
+                  stroke="#528D6B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="options">
+              <div
+                class="option"
+                [class.selected]="
+                  signupForm.get('userType')?.value === userTypes.Consumer
+                "
+                (click)="selectOption(userTypes.Consumer)"
+              >
+                <svg
+                  *ngIf="
+                    signupForm.get('userType')?.value === userTypes.Consumer
+                  "
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.3334 4L6.00002 11.3333L2.66669 8"
+                    stroke="#528D6B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Food Enthusiast</span>
+              </div>
+              <div
+                class="option"
+                [class.selected]="
+                  signupForm.get('userType')?.value === userTypes.Farmer
+                "
+                (click)="selectOption(userTypes.Farmer)"
+              >
+                <svg
+                  *ngIf="signupForm.get('userType')?.value === userTypes.Farmer"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.3334 4L6.00002 11.3333L2.66669 8"
+                    stroke="#528D6B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Local Farmer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            formControlName="phoneNumber"
+            [class.error]="isFieldInvalid('phoneNumber')"
+            placeholder="Your phone number"
+            aria-label="Phone number input"
+          />
+          <div
+            *ngIf="isFieldInvalid('phoneNumber')"
+            class="error-message"
+            aria-live="polite"
+          >
+            <span *ngIf="signupForm.get('phoneNumber')?.errors?.['required']"
+              >Phone number is required</span
+            >
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            [class.error]="isFieldInvalid('email')"
+            placeholder="Enter your email"
+            aria-label="Email input"
+          />
+          <div
+            *ngIf="isFieldInvalid('email')"
+            class="error-message"
+            aria-live="polite"
+          >
+            <span *ngIf="signupForm.get('email')?.errors?.['required']"
+              >Email is required</span
+            >
+            <span *ngIf="signupForm.get('email')?.errors?.['email']"
+              >Please enter a valid email</span
+            >
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <div class="password-input-wrapper">
+            <input
+              [type]="showPassword() ? 'text' : 'password'"
+              id="password"
+              formControlName="password"
+              [class.error]="isFieldInvalid('password')"
+              placeholder="Enter your password"
+              aria-label="Password input"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              (click)="togglePasswordVisibility()"
+              [attr.aria-label]="
+                showPassword() ? 'Hide password' : 'Show password'
+              "
+              [attr.aria-pressed]="showPassword()"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 10C2.5 10 5.5 5 10 5C14.5 5 17.5 10 17.5 10C17.5 10 14.5 15 10 15C5.5 15 2.5 10 2.5 10Z"
+                  stroke="#718096"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+                  stroke="#718096"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            *ngIf="isFieldInvalid('password')"
+            class="error-message"
+            aria-live="polite"
+          >
+            <span *ngIf="signupForm.get('password')?.errors?.['required']"
+              >Password is required</span
+            >
+            <span *ngIf="signupForm.get('password')?.errors?.['minlength']">
+              Password must be at least 8 characters
+            </span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-input-wrapper">
+            <input
+              [type]="showConfirmPassword() ? 'text' : 'password'"
+              id="confirmPassword"
+              formControlName="confirmPassword"
+              [class.error]="isFieldInvalid('confirmPassword')"
+              placeholder="Confirm your password"
+              aria-label="Confirm password input"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              (click)="toggleConfirmPasswordVisibility()"
+              [attr.aria-label]="
+                showConfirmPassword()
+                  ? 'Hide confirm password'
+                  : 'Show confirm password'
+              "
+              [attr.aria-pressed]="showConfirmPassword()"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 10C2.5 10 5.5 5 10 5C14.5 5 17.5 10 17.5 10C17.5 10 14.5 15 10 15C5.5 15 2.5 10 2.5 10Z"
+                  stroke="#718096"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+                  stroke="#718096"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            *ngIf="isFieldInvalid('confirmPassword')"
+            class="error-message"
+            aria-live="polite"
+          >
+            <span
+              *ngIf="signupForm.get('confirmPassword')?.errors?.['required']"
+            >
+              Please confirm your password
+            </span>
+            <span
+              *ngIf="signupForm.get('confirmPassword')?.errors?.['passwordMismatch']"
+            >
+              Passwords do not match
+            </span>
+          </div>
+        </div>
+
+        <div
+          *ngIf="errorMessage()"
+          class="error-message server-error"
+          role="alert"
+        >
+          {{ errorMessage() }}
+        </div>
+
+        <button
+          type="submit"
+          class="submit-button"
+          [disabled]="signupForm.invalid || isLoading()"
+        >
+          <span *ngIf="!isLoading()">Create Account</span>
+          <span *ngIf="isLoading()" class="loader" aria-hidden="true"></span>
+          <span *ngIf="isLoading()" class="sr-only">Loading...</span>
+        </button>
+
+        <div class="login-prompt">
+          Already have an account?
+          <a routerLink="/login" class="login-link">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
